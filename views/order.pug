@@ -1,0 +1,21 @@
+html
+    head
+        title= title
+        script(src="../client.js")
+    body
+        h1 Completed order summary
+        div(id="content")
+            a(href="/") Go back
+            h3 Order number: #{orderNum}
+            table(id = "summary", border="1")
+                tr
+                    th Product
+                    th Amount
+                    th Price
+                each order in orders
+                    tr
+                        td= order.name
+                        td= order.amount
+                        td= (order.price * order.amount).toFixed(2)
+            br
+            button(id="remove_order" + orderNum) Delete order

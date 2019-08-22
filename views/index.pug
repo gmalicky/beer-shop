@@ -1,0 +1,24 @@
+html
+    head
+        title= title
+        script(src="client.js")
+    body
+        h1= welcome
+        a(href="/cart") Shopping cart
+        br
+        br
+        table(border="1")
+            tr
+                th
+                th Product
+                th Price (in euros)
+                th Add to cart
+            each product in products
+                tr
+                    td= product.product_id
+                    td= product.name
+                    td= product.price.toFixed(2)
+                    td(align="center"): button(id='cart' + product.product_id) +
+        br
+        input(type="number", id="order_input" placeholder="Search orders...") 
+        button(id="search_order") Go!

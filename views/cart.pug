@@ -1,0 +1,30 @@
+html
+    head
+        title= title
+        script(src="client.js")
+    body
+        h1 Your shopping cart
+        div(id="content")
+            a(href="/") Go back
+            br
+            br
+            table(id = "summary", border="1")
+                tr
+                    if orders.length > 0
+                        th Product
+                        th Amount
+                        th Price
+                        th Add
+                        th Remove
+                    else
+                        th Your shopping cart is empty
+                each order in orders
+                    tr
+                        td= order.name
+                        td= order.amount
+                        td= (order.price * order.amount).toFixed(2)
+                        td(align="center"): button(id="add" + order.order_id) +
+                        td(align="center"): button(id="del" + order.order_id) -
+            br
+            if orders.length > 0
+                button(id="complete_order") Complete order

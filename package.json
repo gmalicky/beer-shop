@@ -1,0 +1,24 @@
+{
+  "name": "simple_shop_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:up": "node ./db/db_up.js",
+    "db:down": "node ./db/db_down.js",
+    "db:reset": "npm run db:down && npm run db:up"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.4",
+    "serve-favicon": "^2.5.0",
+    "sqlite3": "^4.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
