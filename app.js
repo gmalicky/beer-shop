@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const favicon = require('serve-favicon');
-const db = require('./dbApi');
+const db = require('./db/dbApi');
 
 app.set('views', './views');
 app.set('view engine', 'pug');
