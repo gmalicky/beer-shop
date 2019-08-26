@@ -10,7 +10,7 @@ cache:
   directories:
     - ~/.cache
 env:
-  - CYPRESS_TRAVIS=true CYPRESS_PATH=process.env.PATH
+  - CYPRESS_TRAVIS=true CYPRESS_PATH=$PATH
 install:
   - npm ci
 script:
