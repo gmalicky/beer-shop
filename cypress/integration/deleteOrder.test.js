@@ -6,7 +6,7 @@ describe('Test 2 - delete order', function () {
         // if (!Cypress.env('TRAVIS')) {
         //     cy.exec('npm run db:reset && npm run db:seed');
         // }
-        cy.exec('npm run db:reset && npm run db:seed', { env: { PATH: PATH } });
+        cy.exec('npm run db:reset && npm run db:seed', { env: { PATH: Cypress.env(PATH) } });
     });
     it('Search for order', function () {
         // Query order on id
