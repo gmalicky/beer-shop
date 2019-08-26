@@ -18,7 +18,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: 4c7cc75b-ea0f-40e0-8564-b99e932656fd
+    secure: x2+3NNpMvRW0Gj2b467p2jICNTPfrFHfTWdtfKAJYk3rk3YDcQoLmzmQPShi7h+rhVGzqoYjecSAl0roNEtq+z1dg+DN6Hm9pQNuqves52VKvRkkADREJ6tBlAEEQOsFFOK4uxJAl1+4TDxI53ydO7D2RnHvIYiZQVwzVg3Uc2aaecFcajl49d3jOE9Aizg58YipI4f1gvwIqeSB7crymmwmVbgMlQ/H1le6nlipbOZdDplDP0ABD7gJqqIkbnApdiq3JoW66Yp04im7rbEaJ34TX7euscqfNk+Byzg6mByiu8Y3TNbjAz65Lwfq8IhkJ/7FIfCJIR1pYd0LNwX6HEZjZnYCL4b++dDhUzZltYSJAQWLHSrNb+73Gi0Yydn6rFQdIorZCxiyUquZVzhsD0qZk+x4Y7ZTg3TCJ3r783YvkWHjFOhAWtrjbMOCFpx+0hxNQGtpWXoIrujs3WNVgTkD83PQ48ENXMOklN92Xcux55g6uMmfK6wvsISxC0eEjTj013/jnLk3qDvlPIguaD6KIKQDM/bIS8m62QKDAprzJcb4M9onusdd3kE0m5mw1r7tnAom4mI2HCMxHTHfa6af4vl0bx4TbK0tvfj/tgCT00LglU97fvt6O6wq99+wqZfakqxXdbzpPqASXFlDJNiWHkozHojJH5tfW/416oc=
   app: beer-shop
   on:
     repo: gmalicky/beer-shop
