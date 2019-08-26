@@ -1,18 +1,21 @@
 language: node_js
 node_js:
-  - 11
+- 11
 addons:
   apt:
     packages:
-      # Ubuntu 16+ does not install this dependency by default, so we need to install it ourselves
-      - libgconf-2-4
+    - libgconf-2-4
 cache:
   directories:
-    - ~/.cache
+  - "~/.cache"
 env:
-  - CYPRESS_TRAVIS=true
+- CYPRESS_TRAVIS=true
 install:
-  - npm ci
+- npm ci
 script:
-  - npm run db:up && npm run db:seed
-  - npm test
+- npm run db:up && npm run db:seed
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: Q01Yi1/nniw/RuroEHOUL4MlaUWQeqqKJuepOP5BIUS9dZNZlsx56maQ9uVUAlXEvZyOZNmq/BYEt27zR8o+aB0V2XMnbAyMrgTfPug52lLkd//rMshrkUqbDDwEMo6BflJXfx3wjLzUrBJ9r09wdZKQBTveqc3OjfEe7uwRqfPf/CHYthpKxQ5wkGzL6+2MbEwdh6SP9p1KzzrRK+B5y3yj02HjYHdWn6KHtgjdycdVpNKpbjKoc9k9uhYdobztfmkg2D9MueYMWqwo7/EOobEoufYoKTBkfwIoR/SnpyrOvpmedNx9HPpT8L8MqFUDQTiU3Fp8jRAaHyJNFuCl6AkhvnOegReWiqJQrVN6Tpb2hvjHvHDPnl92CZ04eJ5iWEJUe+UQ2KrElEWLp+gHHMfC58WeL96i5Z4Y46xgFEcdISrmWnEZnGCMdRT2fgS/KxB/UyNWZayhSZ5wfqgZnLbSgTSDZFLAFWcvXnys07MH9Duxh1/870FSw1JJy+VtpoxApgp70UGIeh4elXk9zMQ1pVNx+bbYndUZWdYnnhx07KwnpoFqYWhv+kljKnFBLrbvJ2u/+nHw6wh6urFgBjAyKEdSpz96PQ+tZz5BPNoMMYZ0VPF8wEV57r7W/zI2Iw/mil577Lh39ONGdnG82owDNDe4uBLVfKYicflfm/c=

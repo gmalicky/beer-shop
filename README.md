@@ -1,4 +1,4 @@
-Beer shop webapp
+Beer shop webapp [![Build Status](https://travis-ci.com/gmalicky/beer-shop.svg?branch=master)](https://travis-ci.com/gmalicky/beer-shop)
 ===
 
 Simple Node.js web shop application demonstration with database and integration tests.
@@ -22,7 +22,7 @@ Application shows some basics of eshop functionality provided via simple UI. Use
 
 Main `app.js` file handles the routes (both URL and API) and application logic. 
 
-HTML files are generated with template engine from `views` folder and contain embedded `client/client.js` script, which contains event listeners for buttons and inputs. 
+HTML files are rendered with template engine from `views` folder and contain embedded `client/client.js` script, which contains event listeners for buttons and inputs. 
 
 In `db` folder, database API (`dbApi.js`) handles methods for communication with database. Other files in this folder are used to setup the schema, teardown and seed the database for tests. All products and orders (both complete and open) are saved persistently to database.
 
