@@ -1,1 +1,1 @@
-npm run db:up && npm start
+web npm run db:up && npm start
