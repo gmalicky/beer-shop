@@ -3,7 +3,9 @@
 describe('Test 2 - delete order', function () {
     before(function () {
         // database reset before test
-        cy.exec('npm run db:reset && npm run db:seed', { env: { ...process.env } });
+        if (!Cypress.env('TRAVIS')) {
+            cy.exec('npm run db:reset && npm run db:seed');
+        }
     });
     it('Search for order', function () {
         // Query order on id

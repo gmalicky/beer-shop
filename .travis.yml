@@ -9,7 +9,10 @@ addons:
 cache:
   directories:
     - ~/.cache
+env:
+  - CYPRESS_TRAVIS=true
 install:
   - npm ci
 script:
+  - npm run db:up
   - npm test
