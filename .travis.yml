@@ -10,7 +10,6 @@ cache:
   - "~/.cache"
 env:
 - CYPRESS_TRAVIS=true
-- NODE_ENV=development
 install:
 - npm ci
 script:
