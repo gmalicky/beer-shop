@@ -3,7 +3,7 @@
 describe('Test 2 - delete order', function () {
     before(function () {
         // database reset before test
-        cy.exec('npm run db:reset && npm run db:seed');
+        cy.exec('npm run db:reset && npm run db:seed', { env: { ...process.env } });
     });
     it('Search for order', function () {
         // Query order on id
