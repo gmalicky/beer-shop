@@ -14,5 +14,5 @@ env:
 install:
   - npm ci
 script:
-  - npm run db:up
+  - npm run db:up && npm run db:seed
   - npm test
