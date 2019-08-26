@@ -10,6 +10,7 @@ cache:
   - "~/.cache"
 env:
 - CYPRESS_TRAVIS=true
+- NODE_ENV=development
 install:
 - npm ci
 script:
@@ -22,3 +23,4 @@ deploy:
   app: beer-shop
   on:
     repo: gmalicky/beer-shop
+  run: npm run db:up
