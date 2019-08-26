@@ -22,4 +22,6 @@ deploy:
   app: beer-shop
   on:
     repo: gmalicky/beer-shop
-  run: npm run db:up
+  run: 
+    - npm run db:up
+    - restart
