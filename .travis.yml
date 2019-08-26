@@ -10,9 +10,9 @@ cache:
   directories:
     - ~/.cache
 env:
-  - CYPRESS_TRAVIS=true CYPRESS_PATH=$PATH
+  - CYPRESS_TRAVIS=true
 install:
   - npm ci
 script:
-  # - npm run db:up && npm run db:seed
+  - npm run db:up && npm run db:seed
   - npm test
