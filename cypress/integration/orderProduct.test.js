@@ -4,7 +4,9 @@ describe('Test 1 - order product', function () {
     let orderNum;
     before(function () {
         // database reset before test
-        cy.exec('npm run db:reset');
+        if (!Cypress.env('TRAVIS')) {
+            cy.exec('npm run db:reset');
+        }
     });
     it('Add products to cart', function () {
         // add products A and B to a cart
