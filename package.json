@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "npx nodemon app.js",
-    "test": "cypress run -s 'cypress/integration/**.test.js'",
+    "test": "node app.js & cypress run -s 'cypress/integration/**.test.js'",
     "cypress": "npx cypress open",
     "db:up": "node ./db/db_up.js",
     "db:down": "node ./db/db_down.js",
